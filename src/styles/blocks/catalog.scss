@@ -1,18 +1,11 @@
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   justify-content: center;
-  align-items: center;
+  grid-template-columns: repeat(auto-fill, 200px);
+  gap: 50px 48px;
+  padding: 50px 40px 78px;
 
-  padding: 50px 40px 28px;
-  min-width: 1024px;
-
-  &__card {
-    margin-right: 48px;
-    margin-bottom: 50px;
-
-    &:nth-child(4n) {
-      margin-right: 0;
-    }
+  @media (min-width: 1270px) {
+    grid-template-columns: repeat(4, 200px);
   }
 }
